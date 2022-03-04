@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiEcommerceDesign.IndexPage"
+             Style="{StaticResource MainSectionStyle}"
+             xmlns:viewmodels="clr-namespace:MauiEcommerceDesign.ViewModels"
+             xmlns:res="clr-namespace:MauiEcommerceDesign.Resources.Strings"
+             xmlns:views="clr-namespace:MauiEcommerceDesign.Views"
+             xmlns:controls="clr-namespace:MauiEcommerceDesign"
+             x:DataType="viewmodels:IndexViewModel">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout>
+                <controls:HeaderControl IsVisible="{OnIdiom Phone=true, Tablet=false, Desktop=false}" />
+            </StackLayout>
+            <CollectionView ItemsSource="{Binding Products}"
+                                VerticalOptions="Center"   
+                                 HorizontalOptions="Center"
+                                 Margin="8,60,8,0"
+                            >
+                <CollectionView.Header>
+                    <StackLayout>
+                        <Grid HeightRequest="260">
+                            <Image Aspect="AspectFit" Source="bg.png"/>
+                        </Grid>
+                        <Label Text="Categories" FontAttributes="Bold" FontSize="24" TextColor="Black" Margin="4,10,0,20" />
+                        <StackLayout x:Name="CategoriesListContent" Margin="4,0,0,0"></StackLayout>
+                        <Label Text="Popular" FontAttributes="Bold" FontSize="24" TextColor="Black" Margin="4,20,0,0" />
+                    </StackLayout>
+                    
+                </CollectionView.Header>
+                <CollectionView.ItemsLayout>
+                    <!--<GridItemsLayout Orientation="Vertical"
+                             Span="{OnIdiom Phone=2, Tablet=3, Desktop=3}"
+                             HorizontalItemSpacing="{OnIdiom Phone=16, Tablet=24, Desktop=24}"
+                             VerticalItemSpacing="{OnIdiom Phone=16, Tablet=24, Desktop=24}" />-->
+                    <GridItemsLayout Orientation="Vertical"
+                             Span="{OnIdiom Phone=2, Tablet=3, Desktop=3}"
+                             VerticalItemSpacing="{OnIdiom Phone=16, Tablet=24, Desktop=24}" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="viewmodels:ProductViewModel">
+                        <StackLayout Padding="4">
+                            <views:ProductView BindingContext="{Binding }" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

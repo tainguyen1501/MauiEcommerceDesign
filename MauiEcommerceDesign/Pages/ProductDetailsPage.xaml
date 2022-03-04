@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiEcommerceDesign.ProductDetailsPage"
+             BackgroundColor="White">
+    <ScrollView>
+        <StackLayout>
+            <Image Aspect="Fill" Source="{Binding Product.Images[0]}" HeightRequest="260"/>
+            <VerticalStackLayout>
+                <ScrollView HorizontalScrollBarVisibility="Never"
+        Orientation="Horizontal">
+                    <HorizontalStackLayout
+            BindableLayout.ItemsSource="{Binding Product.Images}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Margin="5" Padding="10">
+                                    <Image Aspect="AspectFill"
+                                    Source="{Binding .}"
+                                    HeightRequest="50"
+                                    WidthRequest="50"
+                                    HorizontalOptions="Center"/>
+                                </Frame>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </HorizontalStackLayout>
+                </ScrollView>
+            </VerticalStackLayout>
+            <StackLayout Margin="10">
+                <Label Text="{Binding Product.Name}" FontAttributes="Bold" FontSize="24"/>
+                <Grid ColumnSpacing="15" ColumnDefinitions="Auto,Auto" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
+                    <Label Grid.Column="0" FontAttributes="Bold" Text="{Binding Product.Price, StringFormat='${0:F2}'}"  HorizontalOptions="Center" FontSize="20" TextColor="{StaticResource PrimaryDark}"/>
+                    <Label Grid.Column="1" Text="{Binding Product.OldPrice, StringFormat='${0:F2}'}" IsVisible="{Binding IsVisibleOldPrice}" HorizontalOptions="Center" TextDecorations="Strikethrough" FontSize="20" TextColor="#9192b7"/>
+                </Grid>
+                <Label Text="Color" FontAttributes="Bold" FontSize="24"/>
+                <VerticalStackLayout>
+                    <ScrollView HorizontalScrollBarVisibility="Never"
+        Orientation="Horizontal">
+                        <HorizontalStackLayout
+            BindableLayout.ItemsSource="{Binding Product.Colors}">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <!--<Frame Margin="5" Padding="10">
+                                    </Frame>-->
+                                    <BoxView CornerRadius="5" BackgroundColor="{Binding .}" WidthRequest="40" HeightRequest="40"></BoxView>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </HorizontalStackLayout>
+                    </ScrollView>
+                </VerticalStackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
