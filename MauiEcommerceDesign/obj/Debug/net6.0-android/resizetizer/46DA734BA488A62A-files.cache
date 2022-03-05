@@ -1,4 +1,6 @@
 ﻿obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\appiconfg.png
+obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\avatar1.png
+obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\avatar2.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\bg.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\cart.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\clock.png
@@ -42,6 +44,8 @@ obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\wishlist.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\wishlist_checked_ic.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\wishlist_ic.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-mdpi\appiconfg.png
+obj\Debug\net6.0-android\resizetizer\r\drawable-mdpi\avatar1.png
+obj\Debug\net6.0-android\resizetizer\r\drawable-mdpi\avatar2.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-mdpi\bg.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-mdpi\cart.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-mdpi\clock.png
@@ -85,6 +89,8 @@ obj\Debug\net6.0-android\resizetizer\r\drawable-mdpi\wishlist.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-mdpi\wishlist_checked_ic.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-mdpi\wishlist_ic.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xhdpi\appiconfg.png
+obj\Debug\net6.0-android\resizetizer\r\drawable-xhdpi\avatar1.png
+obj\Debug\net6.0-android\resizetizer\r\drawable-xhdpi\avatar2.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xhdpi\bg.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xhdpi\cart.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xhdpi\clock.png
@@ -128,6 +134,8 @@ obj\Debug\net6.0-android\resizetizer\r\drawable-xhdpi\wishlist.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xhdpi\wishlist_checked_ic.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xhdpi\wishlist_ic.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xxhdpi\appiconfg.png
+obj\Debug\net6.0-android\resizetizer\r\drawable-xxhdpi\avatar1.png
+obj\Debug\net6.0-android\resizetizer\r\drawable-xxhdpi\avatar2.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xxhdpi\bg.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xxhdpi\cart.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xxhdpi\clock.png
@@ -171,6 +179,8 @@ obj\Debug\net6.0-android\resizetizer\r\drawable-xxhdpi\wishlist.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xxhdpi\wishlist_checked_ic.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xxhdpi\wishlist_ic.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xxxhdpi\appiconfg.png
+obj\Debug\net6.0-android\resizetizer\r\drawable-xxxhdpi\avatar1.png
+obj\Debug\net6.0-android\resizetizer\r\drawable-xxxhdpi\avatar2.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xxxhdpi\bg.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xxxhdpi\cart.png
 obj\Debug\net6.0-android\resizetizer\r\drawable-xxxhdpi\clock.png

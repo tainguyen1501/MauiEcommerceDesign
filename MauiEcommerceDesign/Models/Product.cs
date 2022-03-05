@@ -10,5 +10,6 @@
         public string[] Images { get; set; }
         public string[] Colors { get; set; }
         public string[] Sizes { get; set; }
+        public List<Review> Reviews { get; set; }
     }
 }

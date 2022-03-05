@@ -1103,3 +1103,13 @@ C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\n
 C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\android\assets\System.Private.CoreLib.dll
 C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\android\assets\System.Private.Uri.dll
 C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\android\assets\System.Xml.dll
+C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\avatar1.png
+C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\resizetizer\r\drawable-hdpi\avatar2.png
+C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\resizetizer\r\drawable-mdpi\avatar1.png
+C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\resizetizer\r\drawable-mdpi\avatar2.png
+C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\resizetizer\r\drawable-xhdpi\avatar1.png
+C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\resizetizer\r\drawable-xhdpi\avatar2.png
+C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\resizetizer\r\drawable-xxhdpi\avatar1.png
+C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\resizetizer\r\drawable-xxhdpi\avatar2.png
+C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\resizetizer\r\drawable-xxxhdpi\avatar1.png
+C:\TaiNguyen\Study\Code\MAUI\MauiEcommerceDesign\MauiEcommerceDesign\obj\Debug\net6.0-android\resizetizer\r\drawable-xxxhdpi\avatar2.png

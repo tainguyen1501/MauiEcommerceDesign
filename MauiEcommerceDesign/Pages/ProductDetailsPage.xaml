@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiEcommerceDesign.ProductDetailsPage"
-             BackgroundColor="White">
-    <ScrollView>
+             Title="Nike">
+    <ScrollView BackgroundColor="White">
         <StackLayout>
             <Image Aspect="Fill" Source="{Binding Product.Images[0]}" HeightRequest="260"/>
             <VerticalStackLayout>
@@ -26,27 +26,150 @@
                 </ScrollView>
             </VerticalStackLayout>
             <StackLayout Margin="10">
-                <Label Text="{Binding Product.Name}" FontAttributes="Bold" FontSize="24"/>
-                <Grid ColumnSpacing="15" ColumnDefinitions="Auto,Auto" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
-                    <Label Grid.Column="0" FontAttributes="Bold" Text="{Binding Product.Price, StringFormat='${0:F2}'}"  HorizontalOptions="Center" FontSize="20" TextColor="{StaticResource PrimaryDark}"/>
-                    <Label Grid.Column="1" Text="{Binding Product.OldPrice, StringFormat='${0:F2}'}" IsVisible="{Binding IsVisibleOldPrice}" HorizontalOptions="Center" TextDecorations="Strikethrough" FontSize="20" TextColor="#9192b7"/>
-                </Grid>
-                <Label Text="Color" FontAttributes="Bold" FontSize="24"/>
-                <VerticalStackLayout>
-                    <ScrollView HorizontalScrollBarVisibility="Never"
-        Orientation="Horizontal">
-                        <HorizontalStackLayout
-            BindableLayout.ItemsSource="{Binding Product.Colors}">
-                            <BindableLayout.ItemTemplate>
-                                <DataTemplate>
-                                    <!--<Frame Margin="5" Padding="10">
-                                    </Frame>-->
-                                    <BoxView CornerRadius="5" BackgroundColor="{Binding .}" WidthRequest="40" HeightRequest="40"></BoxView>
-                                </DataTemplate>
-                            </BindableLayout.ItemTemplate>
-                        </HorizontalStackLayout>
-                    </ScrollView>
-                </VerticalStackLayout>
+                <!--Name, Price-->
+                <StackLayout  Margin="0,10">
+                    <Label Text="{Binding Product.Name}" FontAttributes="Bold" FontSize="24"/>
+                    <Grid ColumnSpacing="15" ColumnDefinitions="Auto,Auto" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
+                        <Label Grid.Column="0" FontAttributes="Bold" Text="{Binding Product.Price, StringFormat='${0:F2}'}"  HorizontalOptions="Center" FontSize="20" TextColor="{StaticResource PrimaryDark}"/>
+                        <Label Grid.Column="1" Text="{Binding Product.OldPrice, StringFormat='${0:F2}'}" IsVisible="{Binding IsVisibleOldPrice}" HorizontalOptions="Center" TextDecorations="Strikethrough" FontSize="20" TextColor="#9192b7"/>
+                    </Grid>
+                </StackLayout>
+                
+                <!--Color-->
+                <StackLayout Margin="0,10">
+                    <Label Text="Color" FontAttributes="Bold" FontSize="24" Margin="0,0,0,10"/>
+                    <VerticalStackLayout>
+                        <ScrollView HorizontalScrollBarVisibility="Never"
+                                Orientation="Horizontal">
+                            <HorizontalStackLayout BindableLayout.ItemsSource="{Binding Product.Colors}">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <Frame Margin="0,0,10,0" Padding="5" HasShadow="False" BorderColor="#D3D3D3" CornerRadius="5">
+                                            <BoxView CornerRadius="5" BackgroundColor="{Binding .}" WidthRequest="40" HeightRequest="40" />
+                                        </Frame>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </HorizontalStackLayout>
+                        </ScrollView>
+                    </VerticalStackLayout>
+                </StackLayout>
+
+                <!--Size-->
+                <StackLayout Margin="0,10">
+                    <Label Text="Sizes" FontAttributes="Bold" FontSize="24" Margin="0,0,0,10"/>
+                    <VerticalStackLayout>
+                        <ScrollView HorizontalScrollBarVisibility="Never"
+                                Orientation="Horizontal">
+                            <HorizontalStackLayout BindableLayout.ItemsSource="{Binding Product.Sizes}">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <Frame Margin="0,0,10,0" Padding="5" BorderColor="#D3D3D3" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="5" HasShadow="False">
+                                            <Label Text="{Binding .}" HeightRequest="40" WidthRequest="40" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" FontAttributes="Bold"></Label>
+                                        </Frame>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </HorizontalStackLayout>
+                        </ScrollView>
+                    </VerticalStackLayout>
+                </StackLayout>
+
+                <!--Description-->
+                <StackLayout  Margin="0,10">
+                    <Label Text="Description" FontAttributes="Bold" FontSize="24" Margin="0,0,0,10"/>
+                    <Label TextColor="#9192b7"
+                           Text="The versatile Jordan Air NFH is not for hooping, but its look and feel are a testament to the game's huge influence in sneaker and streetwear culture. Classic basketball details like visible Air cushioning, stitched overlays and herringbone traction contrast with the diverse materials, textures and technical gear vibe. This camo 'Bayou Boys' version is inspired by the swampy green colors of one of Zion's game shoes."
+                        />
+                </StackLayout>
+
+                <!--Reviews-->
+                <StackLayout  Margin="0,10">
+                    <Label Text="Reviews (18)" FontAttributes="Bold" FontSize="24" Margin="0,0,0,10"/>
+                    <VerticalStackLayout  BindableLayout.ItemsSource="{Binding Product.Reviews}" >
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout
+                                        HorizontalOptions="Center"
+                                        Orientation="Vertical"
+                                        VerticalOptions="Center">
+                                        <Image  HorizontalOptions="Center"
+                                                VerticalOptions="Center"
+                                                Grid.Column="1"
+                                                WidthRequest="75"
+                                                HeightRequest="75"
+                                                Aspect="AspectFill"
+                                                Source="{Binding Avatar}">
+                                            <Image.Clip>
+                                                <EllipseGeometry 
+                                        Center="75,75"
+                                        RadiusX="75"
+                                        RadiusY="75"/>
+                                            </Image.Clip>
+                                        </Image>
+                                    </StackLayout>
+                                    <StackLayout
+                            Margin="10,0,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Vertical"
+                            VerticalOptions="Center">
+                                        <StackLayout
+                                Margin="0,0,10,0"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                VerticalOptions="Center">
+                                            <Label
+                                    Margin="0,0,0,0"
+                                    FontSize="17"
+                                    HorizontalOptions="Start"
+                                    Text="{Binding Name}"
+                                    TextColor="#000000" />
+                                            <Label
+                                                 TextColor="#9192b7"
+                                    FontSize="12"
+                                    HorizontalOptions="EndAndExpand"
+                                    Text="{Binding Date}"/>
+                                        </StackLayout>
+                                        <StackLayout
+                                Margin="0,0,10,10"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                VerticalOptions="Center">
+                                            <Image
+                                    HeightRequest="15"
+                                    HorizontalOptions="Start"
+                                    Source="tick.png" />
+                                            <Label
+                                                TextColor="#9192b7"
+                                    FontSize="15"
+                                    HorizontalOptions="Start"
+                                    Text="{Binding Comment}" />
+                                            <Image
+                                    HeightRequest="20"
+                                    HorizontalOptions="EndAndExpand"
+                                    Source="pins.png"
+                                    WidthRequest="20" />
+                                        </StackLayout>
+                                        <StackLayout
+                                Margin="0,0,10,0"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                VerticalOptions="Center">
+                                            <BoxView
+                                    HeightRequest="0.3"
+                                    HorizontalOptions="FillAndExpand"
+                                    Color="LightGray" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+                    <Label Text="Load more" HorizontalOptions="Center" TextColor="#9192b7" FontSize="15" Margin="0,5">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Product.FetchProductReviewsCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ScrollView>
