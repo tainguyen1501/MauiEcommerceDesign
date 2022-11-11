@@ -51,8 +51,14 @@ public class ProductViewModel : BaseViewModel
 
     internal Task InitializeAsync()
     {
-        foreach (var pro in Product.Reviews)
-            Reviews.Add(pro);
+        for (int i = 0; i < 6; i++)
+            Reviews.Add(new Review
+            {
+                Name = i % 2 == 0 ? "Tai Nguyen" : "David John",
+                Avatar = i % 2 == 0 ? "avatar1.png" : "avatar2.png",
+                Comment = i % 2 == 0 ? "Best Product." : "Sample comment data.",
+                Date = $"2022/03/2{i}"
+            });
         return Task.CompletedTask;
     }
 

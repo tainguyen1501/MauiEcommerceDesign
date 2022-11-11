@@ -84,6 +84,9 @@
 	  <Compile Update="Views\CategoriesListView.xaml.cs">
 	    <DependentUpon>CategoriesListView.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\CartItemView.xaml.cs">
+	    <DependentUpon>CartItemView.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -95,6 +98,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Controls\HeaderControl.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\CartPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\IndexPage.xaml">
@@ -113,6 +119,10 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CategoriesListView.xaml">
+	    <SubType>Designer</SubType>
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\CartItemView.xaml">
 	    <SubType>Designer</SubType>
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

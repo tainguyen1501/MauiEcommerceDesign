@@ -15,7 +15,7 @@ namespace MauiEcommerceDesign.ViewModels
         {
             Home = new AppSection() { Title = AppResource.Home, Icon = "discover.png", IconDark = "discover.png", TargetType = typeof(IndexPage) };
             Wishlist = new AppSection() { Title = AppResource.Wishlist, Icon = "wishlist.png", IconDark = "wishlist.png", TargetType = typeof(TestPage) };
-            ListenLater = new AppSection() { Title = AppConfig.Desktop ? AppResource.Cart : AppResource.Cart, Icon = "Cart.png", IconDark = "clock_dark.png", TargetType = typeof(TestPage) };
+            ListenLater = new AppSection() { Title = AppConfig.Desktop ? AppResource.Cart : AppResource.Cart, Icon = "Cart.png", IconDark = "clock_dark.png", TargetType = typeof(CartPage) };
             ListenTogether = new AppSection() { Title = AppConfig.Desktop ? AppResource.Account : AppResource.Account, Icon = "user.png", IconDark = "user.png", TargetType = typeof(MainPage) };
             Settings = new AppSection() { Title = AppResource.Settings, Icon = "settings.png", IconDark = "settings_dark.png", TargetType = typeof(MainPage) };
         }

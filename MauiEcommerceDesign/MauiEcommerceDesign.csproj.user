@@ -15,6 +15,9 @@
     <MauiXaml Update="Controls\HeaderControl.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Pages\CartPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Pages\IndexPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -31,6 +34,9 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\CategoriesListView.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\CartItemView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\ProductView.xaml">

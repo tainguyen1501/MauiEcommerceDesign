@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Frame xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="MauiEcommerceDesign.Views.CartItemView"
+       xmlns:b="clr-namespace:MauiEcommerceDesign.Behaviors"
+       CornerRadius="15"
+       HasShadow="False"
+       Margin="0"
+       Padding="8"
+       x:Name="product">
+    <StackLayout Orientation="Horizontal">
+        <StackLayout
+                                        HorizontalOptions="Center"
+                                        Orientation="Vertical"
+                                        VerticalOptions="Center">
+            <Image  HorizontalOptions="Center" Margin="5" BackgroundColor="Blue"
+                                                VerticalOptions="Center"
+                                                WidthRequest="75"
+                                                HeightRequest="75"
+                                                Aspect="AspectFill"
+                                                Source="{Binding Images[0]}">
+            </Image>
+        </StackLayout>
+        <StackLayout
+                            Margin="10,0,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Vertical"
+                            VerticalOptions="Center">
+            <StackLayout
+                                Margin="0,0,10,0"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                VerticalOptions="Center">
+                <Label
+                     TextColor="Black"
+                    FontAttributes="Bold"
+                                    Margin="0,0,0,0"
+                                    FontSize="17"
+                    WidthRequest="200"
+                                    HorizontalOptions="Start"
+                       LineBreakMode="TailTruncation"
+                                    Text="dfadsf dsafdsf dsafdsafdsafdsaf dsaf ads" />
+            </StackLayout>
+            <StackLayout
+                                Margin="0,5"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                VerticalOptions="Center">
+                <Label
+                                    TextColor="{StaticResource Primary}"
+                    FontAttributes="Bold"
+                                    FontSize="15"
+                                    HorizontalOptions="Start"
+                                    Text="{Binding Price, StringFormat='${0:F2}'}" />
+                <Label
+                                                TextColor="#9192b7"
+                                    FontSize="15"
+                    Margin="10,0"
+                                    HorizontalOptions="Start"
+                                    Text="{Binding OldPrice, StringFormat='${0:F2}'}"  TextDecorations="Strikethrough"  IsVisible="{Binding IsVisibleOldPrice}"/>
+                <Image
+                                    HeightRequest="20"
+                                    HorizontalOptions="EndAndExpand"
+                                    Source="pins.png"
+                                    WidthRequest="20" />
+            </StackLayout>
+            <StackLayout
+                                Margin="0,0,10,0"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                VerticalOptions="Center">
+            </StackLayout>
+        </StackLayout>
+        <StackLayout>
+            <Frame Padding="5" BorderColor="#D3D3D3" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="5" HasShadow="False">
+                <Label Text="-" HeightRequest="22" WidthRequest="22" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#D3D3D3" FontAttributes="Bold"></Label>
+            </Frame>
+            <Label Text="{Binding Quantity}" Margin="0,2" FontSize="14" TextColor="Black" HorizontalTextAlignment="Center"/>
+            <Frame Padding="5" BorderColor="Black" BackgroundColor="Black" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="5" HasShadow="False">
+                <Label Text="+" HeightRequest="22" WidthRequest="22" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" FontAttributes="Bold"></Label>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+</Frame>

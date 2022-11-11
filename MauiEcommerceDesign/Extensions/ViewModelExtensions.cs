@@ -8,6 +8,7 @@ public static class ViewModelExtensions
     {
         builder.Services.AddSingleton<IndexViewModel>();
         builder.Services.AddSingleton<ProductDetailsViewModel>();
+        builder.Services.AddSingleton<CartViewModel>();
         return builder;
     }
 }

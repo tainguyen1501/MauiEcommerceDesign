@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiEcommerceDesign.CartPage"
+             Style="{StaticResource MainSectionStyle}"
+             xmlns:viewmodels="clr-namespace:MauiEcommerceDesign.ViewModels"
+             xmlns:res="clr-namespace:MauiEcommerceDesign.Resources.Strings"
+             xmlns:views="clr-namespace:MauiEcommerceDesign.Views"
+             xmlns:controls="clr-namespace:MauiEcommerceDesign"
+             x:DataType="viewmodels:CartViewModel">
+    <ContentPage.Content>
+        <Grid>
+            <CollectionView ItemsSource="{Binding Items}"
+                            HorizontalOptions="Center"
+                            Margin="10,0"
+                            >
+                <CollectionView.Header>
+                    <StackLayout>
+                        <Label Text="Your cart" FontAttributes="Bold" FontSize="24" TextColor="Black" Margin="4,10,0,0" />
+                    </StackLayout>
+                </CollectionView.Header>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                             Span="{OnIdiom Phone=1, Tablet=3, Desktop=3}"
+                             VerticalItemSpacing="{OnIdiom Phone=16, Tablet=24, Desktop=24}" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="viewmodels:CartItemViewModel">
+                        <StackLayout Padding="4">
+                            <views:CartItemView BindingContext="{Binding }" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

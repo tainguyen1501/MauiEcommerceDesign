@@ -14,7 +14,7 @@
         </Tab>
         <Tab Title="{Binding ListenLater.Title}"
              Icon="{Binding ListenLater.Icon}">
-            <ShellContent ContentTemplate="{DataTemplate pages:TestPage}" />
+            <ShellContent ContentTemplate="{DataTemplate pages:CartPage}" />
         </Tab>
         <Tab Title="{Binding ListenTogether.Title}"
              Icon="{Binding ListenTogether.Icon}">
